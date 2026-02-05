@@ -1,5 +1,4 @@
- import { Award, Shield, BadgeCheck } from "lucide-react";
-import { CheckCircle } from "lucide-react";
+ import { Award, Shield, BadgeCheck, Building2, FileCheck, Factory, Barcode, FileText } from "lucide-react";
  
 const mainCerts = [
    {
@@ -23,11 +22,11 @@ const mainCerts = [
  ];
  
 const additionalCerts = [
-  { label: "MEREK", value: "BASARAYA" },
-  { label: "NIB", value: "8120019070095" },
-  { label: "SNI, SKP, IP CPPOB", value: "Tersertifikasi" },
-  { label: "BARCODE", value: "INDOMARET, BPOM" },
-  { label: "Informasi Nilai Gizi", value: "Tersedia" },
+   { label: "MEREK", value: "BASARAYA", icon: BadgeCheck },
+   { label: "NIB", value: "8120019070095", icon: Building2 },
+   { label: "SNI, SKP, IP CPPOB", value: "Tersertifikasi", icon: Factory },
+   { label: "BARCODE", value: "INDOMARET, BPOM", icon: Barcode },
+   { label: "Informasi Nilai Gizi", value: "Tersedia", icon: FileText },
 ];
 
  export const CertificationSection = () => {
@@ -72,7 +71,7 @@ const additionalCerts = [
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {additionalCerts.map((cert, index) => (
               <div key={index} className="flex items-start gap-2 p-3 bg-muted rounded-lg">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                 <cert.icon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-xs text-muted-foreground">{cert.label}</p>
                   <p className="text-sm font-medium text-foreground">{cert.value}</p>
