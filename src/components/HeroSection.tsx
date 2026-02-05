@@ -1,7 +1,6 @@
  import { ChevronDown } from "lucide-react";
  import { Button } from "@/components/ui/button";
  import heroBg from "@/assets/hero-bg.jpg";
- import logo from "@/assets/logo-basaraya.png";
  
  export const HeroSection = () => {
    return (
@@ -17,23 +16,21 @@
        {/* Content */}
        <div className="relative z-10 container-narrow mx-auto px-4 sm:px-6 lg:px-8 text-center">
          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-           <img
-             src={logo}
-             alt="Basaraya Logo"
-             className="h-28 sm:h-36 md:h-44 w-auto mx-auto mb-6 animate-float"
-           />
+             <span className="inline-block px-6 py-2 bg-white/20 backdrop-blur-sm text-white text-lg sm:text-xl font-medium rounded-full mb-6 border border-white/30">
+               Basaraya, Ikan & Camilan
+             </span>
          </div>
  
          <h1
-           className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 opacity-0 animate-fade-in"
+             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 opacity-0 animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
            style={{ animationDelay: "0.4s" }}
          >
            Pusat Oleh-Oleh
-           <span className="block text-accent">Madura</span>
+             <span className="block text-amber-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Madura</span>
          </h1>
  
          <p
-           className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in"
+             className="text-lg sm:text-xl md:text-2xl text-white max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in drop-shadow-[0_1px_5px_rgba(0,0,0,0.5)]"
            style={{ animationDelay: "0.6s" }}
          >
            Camilan khas Madura yang lezat, sehat, dan berkualitas sejak 2017
