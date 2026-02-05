@@ -44,12 +44,12 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Globe, Video } from "lucide-r
                  <h3 className="font-semibold text-foreground mb-1">Telepon & WhatsApp</h3>
                  <p className="text-muted-foreground">Sjarifah Dewi</p>
                  <a 
-                   href="https://wa.me/6281217046640" 
+                  href="https://wa.me/628121704640" 
                    target="_blank"
                    rel="noopener noreferrer"
                    className="text-primary hover:underline font-medium"
                  >
-                   +62 812-1704-640
+                  0812-1704-640
                  </a>
                </div>
              </div>
@@ -148,7 +148,7 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Globe, Video } from "lucide-r
                  asChild
                >
                  <a 
-                   href="https://wa.me/6281217046640?text=Halo, saya tertarik dengan produk Kacang Lorjuk Basaraya" 
+                  href="https://wa.me/628121704640?text=Halo, saya tertarik dengan produk Kacang Lorjuk Basaraya" 
                    target="_blank"
                    rel="noopener noreferrer"
                  >
