@@ -19,6 +19,14 @@
      price: "Rp 17.500",
      image: productPouch2,
    },
+   {
+     id: 3,
+     name: "Kacang Lorjuk Original",
+     description: "Kacang lorjuk dengan resep asli turun temurun",
+     weight: "80 gram",
+     price: "Rp 20.000",
+     image: productMain,
+   },
  ];
  
  export const ProductSection = () => {
@@ -72,24 +80,24 @@
          </div>
  
          {/* Product Cards */}
-         <div className="grid md:grid-cols-2 gap-8">
+           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
            {products.map((product) => (
              <div
                key={product.id}
-               className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"
+                 className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300"
              >
-               <div className="aspect-square overflow-hidden">
+                 <div className="aspect-[4/3] overflow-hidden bg-muted">
                  <img
                    src={product.image}
                    alt={product.name}
-                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                  />
                </div>
-               <div className="p-6">
-                 <h3 className="font-display text-xl font-bold text-foreground mb-2">
+                 <div className="p-5">
+                   <h3 className="font-display text-lg font-bold text-foreground mb-2">
                    {product.name}
                  </h3>
-                 <p className="text-muted-foreground mb-4">{product.description}</p>
+                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{product.description}</p>
                  <div className="flex items-center justify-between">
                    <span className="text-sm text-muted-foreground">Berat: {product.weight}</span>
                    <span className="text-lg font-bold text-primary">{product.price}</span>
