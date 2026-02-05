@@ -1,15 +1,25 @@
  import { motion } from "framer-motion";
  
+ import categoryMakananRingan from "@/assets/category-makanan-ringan.png";
+ import categoryBahanPokok from "@/assets/category-bahan-pokok.png";
+ import categoryMakananInstan from "@/assets/category-makanan-instan.png";
+ import categoryMinuman from "@/assets/category-minuman.png";
+ import categoryMenuSarapan from "@/assets/category-menu-sarapan.png";
+ import categoryMakananSegarBeku from "@/assets/category-makanan-segar-beku.png";
+ import categoryMakananKaleng from "@/assets/category-makanan-kaleng.png";
+ import categoryPembungkusKado from "@/assets/category-pembungkus-kado.png";
+ import categoryRotiKue from "@/assets/category-roti-kue.png";
+ 
  const categories = [
-   { name: "Makanan Ringan", image: "/placeholder.svg" },
-   { name: "Bahan Pokok", image: "/placeholder.svg" },
-   { name: "Makanan Instan", image: "/placeholder.svg" },
-   { name: "Minuman", image: "/placeholder.svg" },
-   { name: "Menu Sarapan", image: "/placeholder.svg" },
-   { name: "Makanan Segar & Beku", image: "/placeholder.svg" },
-   { name: "Makanan Kaleng", image: "/placeholder.svg" },
-   { name: "Pembungkus Kado & Kemasan", image: "/placeholder.svg" },
-   { name: "Roti & Kue", image: "/placeholder.svg" },
+   { name: "Makanan Ringan", image: categoryMakananRingan },
+   { name: "Bahan Pokok", image: categoryBahanPokok },
+   { name: "Makanan Instan", image: categoryMakananInstan },
+   { name: "Minuman", image: categoryMinuman },
+   { name: "Menu Sarapan", image: categoryMenuSarapan },
+   { name: "Makanan Segar & Beku", image: categoryMakananSegarBeku },
+   { name: "Makanan Kaleng", image: categoryMakananKaleng },
+   { name: "Pembungkus Kado & Kemasan", image: categoryPembungkusKado },
+   { name: "Roti & Kue", image: categoryRotiKue },
  ];
  
  export const CategorySection = () => {
