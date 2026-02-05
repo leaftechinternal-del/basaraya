@@ -44,8 +44,8 @@
                <a
                  key={link.href}
                  href={link.href}
-                 className={`text-sm font-medium transition-colors hover:text-primary ${
-                   scrolled ? "text-foreground" : "text-foreground/80"
+                   className={`text-sm font-medium transition-colors ${
+                     scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-white/80"
                  }`}
                >
                  {link.label}
@@ -56,7 +56,9 @@
            {/* Mobile Menu Button */}
            <button
              onClick={() => setIsOpen(!isOpen)}
-             className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+               className={`lg:hidden p-2 rounded-lg transition-colors ${
+                 scrolled ? "hover:bg-muted text-foreground" : "text-white hover:bg-white/10"
+               }`}
              aria-label="Toggle menu"
            >
              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
