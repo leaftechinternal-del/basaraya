@@ -37,7 +37,7 @@
          </p>
  
          <div
-           className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fade-in"
+             className="flex justify-center items-center opacity-0 animate-fade-in"
            style={{ animationDelay: "0.8s" }}
          >
            <Button
@@ -46,14 +46,6 @@
              asChild
            >
              <a href="#produk">Lihat Produk</a>
-           </Button>
-           <Button
-             size="lg"
-             variant="outline"
-             className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
-             asChild
-           >
-             <a href="#kontak">Hubungi Kami</a>
            </Button>
          </div>
        </div>
