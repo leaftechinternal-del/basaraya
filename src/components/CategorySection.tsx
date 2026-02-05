@@ -1,4 +1,6 @@
  import { motion } from "framer-motion";
+ import { Instagram } from "lucide-react";
+ import { Button } from "@/components/ui/button";
  
  import categoryMakananRingan from "@/assets/category-makanan-ringan.png";
  import categoryBahanPokok from "@/assets/category-bahan-pokok.png";
@@ -29,9 +31,25 @@
          <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
            Kategori
          </span>
-         <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-10">
-           Jelajahi Produk Kami
-         </h2>
+           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
+             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
+               Jelajahi Produk Kami
+             </h2>
+             <Button
+               variant="outline"
+               className="w-fit border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-full"
+               asChild
+             >
+               <a
+                 href="https://www.instagram.com/katalog.basaraya"
+                 target="_blank"
+                 rel="noopener noreferrer"
+               >
+                 <Instagram className="w-5 h-5 mr-2" />
+                 Lihat Katalog
+               </a>
+             </Button>
+           </div>
          
          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4 md:gap-6">
            {categories.map((category, index) => (
