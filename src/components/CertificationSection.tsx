@@ -1,34 +1,35 @@
  import { Award, Shield, BadgeCheck } from "lucide-react";
- import sertifikatPirt from "@/assets/sertifikat-pirt.png";
- import sertifikatHalal from "@/assets/sertifikat-halal.png";
+import { CheckCircle } from "lucide-react";
  
- const certifications = [
+const mainCerts = [
    {
      icon: Shield,
-     title: "P-IRT",
-     number: "8113528040285-30",
-     description:
-       "Produk kami mematuhi standar keamanan pangan, kebersihan, dan kualitas yang ditetapkan untuk didistribusikan di pasar Indonesia.",
-     image: sertifikatPirt,
+    title: "Ijin Edar",
+    number: "BPOM RI MD, SPPIRT",
+    description: "Produk kami mematuhi standar keamanan pangan dan kualitas BPOM.",
    },
    {
      icon: Award,
-     title: "Halal MUI",
-     number: "ID35410025453320825",
-     description:
-       "Produk kami telah bersertifikat Halal dan cocok untuk konsumen Muslim, memenuhi aturan dan etika yang ketat.",
-     image: sertifikatHalal,
+    title: "Sertifikat Halal",
+    number: "MUI Certified",
+    description: "Produk telah bersertifikat Halal dan cocok untuk konsumen Muslim.",
    },
    {
      icon: BadgeCheck,
      title: "Trademark (HKI)",
      number: "IDM001042076",
-     description:
-       "Merek Basaraya telah terdaftar resmi di Direktorat Jenderal Kekayaan Intelektual (DJKI) Indonesia.",
-     image: null,
+    description: "Merek Basaraya terdaftar resmi di DJKI Indonesia.",
    },
  ];
  
+const additionalCerts = [
+  { label: "MEREK", value: "BASARAYA" },
+  { label: "NIB", value: "8120019070095" },
+  { label: "SNI, SKP, IP CPPOB", value: "Tersertifikasi" },
+  { label: "BARCODE", value: "INDOMARET, BPOM" },
+  { label: "Informasi Nilai Gizi", value: "Tersedia" },
+];
+
  export const CertificationSection = () => {
    return (
      <section id="sertifikasi" className="section-padding bg-background">
@@ -46,7 +47,7 @@
          </div>
  
          <div className="grid md:grid-cols-3 gap-8">
-           {certifications.map((cert, index) => (
+          {mainCerts.map((cert, index) => (
              <div
                key={index}
                className="bg-card rounded-2xl p-8 shadow-card hover:shadow-elevated transition-all duration-300 text-center"
@@ -59,18 +60,27 @@
                </h3>
                <p className="text-sm text-primary font-mono mb-4">{cert.number}</p>
                <p className="text-muted-foreground text-sm">{cert.description}</p>
-               {cert.image && (
-                 <div className="mt-6">
-                   <img
-                     src={cert.image}
-                     alt={cert.title}
-                     className="h-16 w-auto mx-auto opacity-80"
-                   />
-                 </div>
-               )}
              </div>
            ))}
          </div>
+
+        {/* Additional Certifications */}
+        <div className="mt-12 bg-card rounded-2xl p-8 shadow-card">
+          <h3 className="font-display text-xl font-bold text-foreground text-center mb-6">
+            Legalitas Lengkap
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {additionalCerts.map((cert, index) => (
+              <div key={index} className="flex items-start gap-2 p-3 bg-muted rounded-lg">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-xs text-muted-foreground">{cert.label}</p>
+                  <p className="text-sm font-medium text-foreground">{cert.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
        </div>
      </section>
    );
