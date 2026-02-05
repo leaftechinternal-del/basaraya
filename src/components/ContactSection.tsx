@@ -1,4 +1,4 @@
- import { MapPin, Phone, Mail, Instagram, Facebook, Globe } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook, Globe, Video } from "lucide-react";
  import { Button } from "@/components/ui/button";
  
  export const ContactSection = () => {
@@ -96,18 +96,38 @@
                    href="https://instagram.com/basarayagroup"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-primary-foreground hover:scale-110 transition-transform"
+                  title="@basarayagroup"
                  >
                    <Instagram className="w-6 h-6" />
                  </a>
+                <a
+                  href="https://instagram.com/katalog.basaraya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 flex items-center justify-center text-primary-foreground hover:scale-110 transition-transform"
+                  title="@katalog.basaraya"
+                >
+                  <Instagram className="w-6 h-6" />
+                </a>
                  <a
                    href="https://facebook.com/basarayagroup"
                    target="_blank"
                    rel="noopener noreferrer"
-                   className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white hover:scale-110 transition-transform"
+                  className="w-12 h-12 rounded-full bg-[hsl(221,44%,41%)] flex items-center justify-center text-primary-foreground hover:scale-110 transition-transform"
+                  title="Basaraya Ikan & Camilan"
                  >
                    <Facebook className="w-6 h-6" />
                  </a>
+                <a
+                  href="https://tiktok.com/@tokobasaraya"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-foreground flex items-center justify-center text-background hover:scale-110 transition-transform"
+                  title="@tokobasaraya"
+                >
+                  <Video className="w-6 h-6" />
+                </a>
                </div>
              </div>
            </div>

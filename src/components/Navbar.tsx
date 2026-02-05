@@ -7,6 +7,7 @@
    { href: "#produk", label: "Produk" },
    { href: "#keunggulan", label: "Keunggulan" },
    { href: "#sertifikasi", label: "Sertifikasi" },
+  { href: "#kemitraan", label: "Kemitraan" },
    { href: "#pemesanan", label: "Pemesanan" },
    { href: "#kontak", label: "Kontak" },
  ];
