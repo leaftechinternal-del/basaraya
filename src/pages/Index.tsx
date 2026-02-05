@@ -12,6 +12,7 @@ import { MediaSection } from "@/components/MediaSection";
 import { OrderSection } from "@/components/OrderSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const Index = () => {
   return (
@@ -30,6 +31,7 @@ const Index = () => {
       <OrderSection />
       <ContactSection />
       <Footer />
+       <FloatingWhatsApp />
     </div>
   );
 };
