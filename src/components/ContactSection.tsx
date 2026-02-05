@@ -158,8 +158,7 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Globe, Video } from "lucide-r
                </Button>
                <Button
                  size="lg"
-                 variant="outline"
-                 className="w-full border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 rounded-full text-lg py-6"
+                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-full text-lg py-6"
                  asChild
                >
                  <a href="mailto:basarayagroup@gmail.com">
