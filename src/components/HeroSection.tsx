@@ -1,0 +1,73 @@
+ import { ChevronDown } from "lucide-react";
+ import { Button } from "@/components/ui/button";
+ import heroBg from "@/assets/hero-bg.jpg";
+ import logo from "@/assets/logo-basaraya.png";
+ 
+ export const HeroSection = () => {
+   return (
+     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+       {/* Background Image */}
+       <div
+         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+         style={{ backgroundImage: `url(${heroBg})` }}
+       >
+         <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/70" />
+       </div>
+ 
+       {/* Content */}
+       <div className="relative z-10 container-narrow mx-auto px-4 sm:px-6 lg:px-8 text-center">
+         <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
+           <img
+             src={logo}
+             alt="Basaraya Logo"
+             className="h-28 sm:h-36 md:h-44 w-auto mx-auto mb-6 animate-float"
+           />
+         </div>
+ 
+         <h1
+           className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-4 opacity-0 animate-fade-in"
+           style={{ animationDelay: "0.4s" }}
+         >
+           Pusat Oleh-Oleh
+           <span className="block text-accent">Madura</span>
+         </h1>
+ 
+         <p
+           className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 max-w-2xl mx-auto mb-8 opacity-0 animate-fade-in"
+           style={{ animationDelay: "0.6s" }}
+         >
+           Camilan khas Madura yang lezat, sehat, dan berkualitas sejak 2017
+         </p>
+ 
+         <div
+           className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0 animate-fade-in"
+           style={{ animationDelay: "0.8s" }}
+         >
+           <Button
+             size="lg"
+             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg rounded-full shadow-elevated transition-all hover:scale-105"
+             asChild
+           >
+             <a href="#produk">Lihat Produk</a>
+           </Button>
+           <Button
+             size="lg"
+             variant="outline"
+             className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 px-8 py-6 text-lg rounded-full backdrop-blur-sm"
+             asChild
+           >
+             <a href="#kontak">Hubungi Kami</a>
+           </Button>
+         </div>
+       </div>
+ 
+       {/* Scroll Indicator */}
+       <a
+         href="#tentang"
+         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/70 hover:text-primary-foreground transition-colors animate-bounce"
+       >
+         <ChevronDown className="h-8 w-8" />
+       </a>
+     </section>
+   );
+ };
